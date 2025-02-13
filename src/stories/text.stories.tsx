@@ -18,7 +18,7 @@ const meta = {
     uppercase: false,
   },
   render: (args) => (
-    <Text {...args} style={{ color: "tomato" }}>
+    <Text {...args} style={{ color: "var(--tone-positive)" }}>
       <strong>Lorem</strong> <em>ipsum</em> dolor sit amet.
     </Text>
   ),
