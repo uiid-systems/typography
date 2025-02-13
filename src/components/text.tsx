@@ -1,9 +1,15 @@
-import { cx, booleanProps, styleProps, type StyleProps } from "@uiid/core";
+import {
+  cx,
+  booleanProps,
+  styleProps,
+  type StyleProps,
+  type RenderProp,
+} from "@uiid/core";
 import { isValidElement, cloneElement } from "react";
 
 import * as properties from "../properties";
 
-import type { RenderProp, VariantProps } from "../types";
+import type { VariantProps } from "../types";
 
 export type TextProps = {
   render?: (() => RenderProp) | RenderProp;
