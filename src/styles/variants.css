@@ -1,0 +1,48 @@
+[data-uiid-typography] {
+  &.block {
+    display: block;
+  }
+
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.capitalize {
+    text-transform: capitalize;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &.inline {
+    display: inline;
+  }
+
+  &.interactive {
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.lowercase {
+    text-transform: lowercase;
+  }
+
+  &.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
