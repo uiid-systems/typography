@@ -1,3 +1,4 @@
 export * from "./alignments";
-export * from "./wrap";
+export * from "./spacing";
 export * from "./visibility";
+export * from "./wrap";
