@@ -1,52 +1,50 @@
-[data-uiid-typography] {
-  &.block {
-    display: block;
-  }
+.block {
+  display: block;
+}
 
-  &.bold {
-    font-weight: bold;
-  }
+.bold {
+  font-weight: bold;
+}
 
-  &.capitalize {
-    text-transform: capitalize;
-  }
+.capitalize {
+  text-transform: capitalize;
+}
 
-  &.hidden {
-    display: none;
-  }
+.hidden {
+  display: none;
+}
 
-  &.inline {
-    display: inline;
-  }
+.inline {
+  display: inline;
+}
 
-  &.interactive {
-    cursor: pointer;
-    text-decoration: underline;
+.interactive {
+  cursor: pointer;
+  text-decoration: underline;
 
-    &:hover {
-      text-decoration: none;
-    }
+  :hover {
+    text-decoration: none;
   }
+}
 
-  &.italic {
-    font-style: italic;
-  }
+.italic {
+  font-style: italic;
+}
 
-  &.lowercase {
-    text-transform: lowercase;
-  }
+.lowercase {
+  text-transform: lowercase;
+}
 
-  &.truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
-  &.uppercase {
-    text-transform: uppercase;
-  }
+.uppercase {
+  text-transform: uppercase;
+}
 
-  &.underline {
-    text-decoration: underline;
-  }
+.underline {
+  text-decoration: underline;
 }

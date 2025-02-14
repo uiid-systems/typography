@@ -1,7 +1,7 @@
 {
   "name": "@uiid/typography",
   "description": "react typography components",
-  "version": "0.0.0-alpha.2",
+  "version": "0.0.0-alpha.3",
   "private": false,
   "exports": {
     "./styles.css": "./dist/styles.css",
