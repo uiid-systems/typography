@@ -1,4 +1,4 @@
-[data-uiid-typography] {
+:root {
   --tone-positive: mediumseagreen;
   --tone-negative: tomato;
   --tone-cautious: gold;
