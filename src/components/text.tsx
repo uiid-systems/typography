@@ -1,72 +1,36 @@
-import {
-  cx,
-  booleanProps,
-  styleProps,
-  type StyleProps,
-  type RenderProp,
-} from "@uiid/core";
+import { cx, booleanProps, styleProps, type RenderProp } from "@uiid/core";
 import { isValidElement, cloneElement } from "react";
 
-import * as properties from "../properties";
+import { STYLE_PROPS, TOGGLE_PROPS } from "../constants";
+import type { TypographyBooleanProps, TypographyStyleProps } from "../types";
 
-import type { VariantProps } from "../types";
-
-export type TextProps = {
-  render?: (() => RenderProp) | RenderProp;
-} & React.HTMLAttributes<HTMLElement> &
+export type TextProps = React.HTMLAttributes<HTMLSpanElement> &
   React.PropsWithChildren &
-  StyleProps<typeof properties> &
-  VariantProps;
+  TypographyBooleanProps &
+  TypographyStyleProps & {
+    render?: RenderProp;
+    ref?: React.Ref<any>;
+  };
 
-export const Text = ({
-  block,
-  bold,
-  capitalize,
-  hidden,
-  inline,
-  interactive,
-  italic,
-  lowercase,
-  truncate,
-  uppercase,
-  render,
-  className,
-  style,
-  children,
-  ...props
-}: TextProps) => {
-  const element = typeof render === "function" ? render() : render;
-  const styles = { ...styleProps(props, properties), ...style };
-  const variants = booleanProps({
-    block,
-    bold,
-    capitalize,
-    hidden,
-    inline,
-    interactive,
-    italic,
-    lowercase,
-    truncate,
-    uppercase,
-  });
+export const Text = ({ render, children, ...props }: TextProps) => {
+  const styles = styleProps(props, STYLE_PROPS);
+  const variants = booleanProps(props, TOGGLE_PROPS);
 
-  if (isValidElement(element)) {
-    return cloneElement(element, {
-      ...props,
-      children: children ?? element.props.children,
-      className: cx(variants, className, element.props.className),
-      style: styles,
+  const propsWithUiid = {
+    "data-uiid-typography": "text",
+    ...props,
+    style: { ...styles, ...variants },
+  };
+
+  if (isValidElement(render)) {
+    return cloneElement(render, {
+      ...propsWithUiid,
+      children: children ?? render.props.children,
+      className: cx(props.className, render.props.className),
     });
   }
 
-  return (
-    <div
-      data-uiid-typography="text"
-      className={cx(variants, className)}
-      style={styles}
-      {...props}
-    >
-      {children}
-    </div>
-  );
+  return <div {...propsWithUiid}>{children}</div>;
 };
+
+Text.displayName = "Text";

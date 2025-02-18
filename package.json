@@ -11,7 +11,6 @@
     }
   },
   "files": [
-    "src",
     "dist"
   ],
   "scripts": {
@@ -22,29 +21,30 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@uiid/core": "latest"
+    "@uiid/core": "latest",
+    "@uiid/style-props": "latest"
   },
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.5.5",
-    "@storybook/addon-interactions": "^8.5.5",
-    "@storybook/blocks": "^8.5.5",
-    "@storybook/react": "^8.5.5",
-    "@storybook/react-vite": "^8.5.5",
-    "@storybook/test": "^8.5.5",
+    "@storybook/addon-essentials": "^8.5.6",
+    "@storybook/addon-interactions": "^8.5.6",
+    "@storybook/blocks": "^8.5.6",
+    "@storybook/react": "^8.5.6",
+    "@storybook/react-vite": "^8.5.6",
+    "@storybook/test": "^8.5.6",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/node": "22.10.5",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
     "add": "^2.0.6",
     "happy-dom": "^17.1.0",
     "pnpm": "^9.15.5",
-    "storybook": "^8.5.5",
+    "storybook": "^8.5.6",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
     "tsup": "8.3.5",
