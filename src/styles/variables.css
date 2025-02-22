@@ -1,19 +1,21 @@
 [data-uiid-typography] {
-  --tone-positive: mediumseagreen;
-  --tone-negative: tomato;
-  --tone-cautious: gold;
-  --tone-muted: color-mix(in srgb, var(--foreground), var(--background) 50%);
-  --tone-subtle: color-mix(in srgb, var(--foreground), var(--background) 20%);
+  --shade-positive: mediumseagreen;
+  --shade-negative: tomato;
+  --shade-cautious: gold;
+  --shade-muted: color-mix(in srgb, var(--foreground), var(--background) 50%);
+  --shade-subtle: color-mix(in srgb, var(--foreground), var(--background) 30%);
 
   --text-5: 2.25rem;
   --text-4: 1.875rem;
   --text-3: 1.5rem;
   --text-2: 1.25rem;
   --text-1: 1rem;
+  --text-0: 0.875rem;
 
   --text-5-leading: calc(2.5 / var(--text-5));
   --text-4-leading: calc(2.25 / var(--text-4));
   --text-3-leading: calc(2 / var(--text-3));
   --text-2-leading: calc(1.75 / var(--text-2));
   --text-1-leading: calc(1.5 / var(--text-1));
+  --text-0-leading: calc(1.25 / var(--text-0));
 }

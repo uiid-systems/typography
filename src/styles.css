@@ -1,1 +1,2 @@
 @import url("./styles/variables.css") layer(uiid.typography);
+@import url("./styles/components.css") layer(uiid.typography);

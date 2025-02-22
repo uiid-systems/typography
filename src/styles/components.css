@@ -1,0 +1,50 @@
+[data-uiid-typography] {
+  margin: inherit;
+}
+
+h1,
+.size-5 {
+  font-size: var(--text-5);
+  letter-spacing: var(--text-5-leading);
+}
+h2,
+.size-4 {
+  font-size: var(--text-4);
+  letter-spacing: var(--text-4-leading);
+}
+h3,
+.size-3 {
+  font-size: var(--text-3);
+  letter-spacing: var(--text-3-leading);
+}
+h4,
+.size-2 {
+  font-size: var(--text-2);
+  letter-spacing: var(--text-2-leading);
+}
+h5,
+.size-1 {
+  font-size: var(--text-1);
+  letter-spacing: var(--text-1-leading);
+}
+p,
+.size-0 {
+  font-size: var(--text-0);
+  letter-spacing: var(--text-0-leading);
+}
+
+.shade-positive {
+  color: var(--shade-positive);
+}
+.shade-negative {
+  color: var(--shade-negative);
+}
+.shade-cautious {
+  color: var(--shade-cautious);
+}
+.shade-muted {
+  color: var(--shade-muted);
+}
+.shade-subtle {
+  color: var(--shade-subtle);
+}

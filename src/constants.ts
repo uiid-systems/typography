@@ -3,20 +3,7 @@ import {
   display,
   opacity,
   overflow,
-  p,
-  px,
-  py,
-  pt,
-  pb,
-  pl,
-  pr,
-  m,
-  mx,
-  my,
-  mt,
-  mb,
-  ml,
-  mr,
+  spacing,
   visibility,
 } from "@uiid/style-props/styles";
 import {
@@ -37,21 +24,8 @@ export const STYLE_PROPS = {
   display,
   opacity,
   overflow,
-  p,
-  px,
-  py,
-  pt,
-  pb,
-  pl,
-  pr,
-  m,
-  mx,
-  my,
-  mt,
-  mb,
-  ml,
-  mr,
   visibility,
+  ...spacing,
 };
 export const TOGGLE_PROPS = {
   bold,
@@ -65,3 +39,13 @@ export const TOGGLE_PROPS = {
   underline,
   uppercase,
 };
+
+export const SIZES = [0, 1, 2, 3, 4, 5] as const;
+
+export const SHADES = [
+  "positive",
+  "negative",
+  "cautious",
+  "muted",
+  "subtle",
+] as const;
