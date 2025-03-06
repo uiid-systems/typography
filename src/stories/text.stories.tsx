@@ -62,6 +62,12 @@ const meta = {
       <Text {...args} size={0}>
         Lorem ipsum dolor sit amet.
       </Text>
+
+      <div style={{ backgroundColor: "tomato", width: 220 }}>
+        <Text {...args} size={1} ow="anywhere">
+          Thisverylongwordwillbreakanywhere.
+        </Text>
+      </div>
     </div>
   ),
 } satisfies Meta<typeof Text>;

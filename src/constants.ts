@@ -1,5 +1,5 @@
 import {
-  ta,
+  typography,
   display,
   opacity,
   overflow,
@@ -20,12 +20,12 @@ import {
 } from "@uiid/style-props/toggles";
 
 export const STYLE_PROPS = {
-  ta,
   display,
   opacity,
   overflow,
   visibility,
   ...spacing,
+  ...typography,
 };
 export const TOGGLE_PROPS = {
   bold,

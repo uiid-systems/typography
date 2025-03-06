@@ -18,4 +18,6 @@
   --text-2-leading: calc(1.75 / var(--text-2));
   --text-1-leading: calc(1.5 / var(--text-1));
   --text-0-leading: calc(1.25 / var(--text-0));
+
+  --spacing: 0.25rem;
 }
