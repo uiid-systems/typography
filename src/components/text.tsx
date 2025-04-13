@@ -19,13 +19,38 @@ export const Text = ({
   size,
   shade,
   children,
-  ...props
+  ...allProps
 }: TextProps) => {
-  const styles = styleProps(props, STYLE_PROPS);
-  const variants = booleanProps(props, TOGGLE_PROPS);
+  const styles = styleProps(allProps, STYLE_PROPS);
+  const variants = booleanProps(allProps, TOGGLE_PROPS);
+
+  // Get arrays of keys to filter out
+  const togglePropKeys = Object.keys(TOGGLE_PROPS) as Array<
+    keyof typeof TOGGLE_PROPS
+  >;
+  const stylePropKeys = Object.keys(STYLE_PROPS) as Array<
+    keyof typeof STYLE_PROPS
+  >;
+
+  // Create a copy of the props to modify
+  const filteredProps: Record<string, unknown> = { ...allProps };
+
+  // Remove toggle props
+  togglePropKeys.forEach((key) => {
+    if (key in filteredProps) {
+      delete filteredProps[key as string];
+    }
+  });
+
+  // Remove style props
+  stylePropKeys.forEach((key) => {
+    if (key in filteredProps) {
+      delete filteredProps[key as string];
+    }
+  });
 
   const classNames = cx(
-    props.className,
+    allProps.className,
     render && render.props.className,
     size !== undefined && `size-${size}`,
     shade && `shade-${shade}`
@@ -33,7 +58,7 @@ export const Text = ({
 
   const propsWithUiid = {
     "data-uiid-typography": "text",
-    ...props,
+    ...filteredProps,
     style: { ...styles, ...variants },
     className: classNames,
   };
