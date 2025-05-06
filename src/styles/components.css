@@ -1,50 +1,55 @@
-[data-uiid-typography] {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   margin: inherit;
 }
 
 h1,
-.size-5 {
-  font-size: var(--text-5);
-  letter-spacing: var(--text-5-leading);
+[level="6"] {
+  font-size: var(--text_6_size);
+  letter-spacing: var(--text_6_leading);
 }
 h2,
-.size-4 {
-  font-size: var(--text-4);
-  letter-spacing: var(--text-4-leading);
+[level="5"] {
+  font-size: var(--text_5_size);
+  letter-spacing: var(--text_5_leading);
 }
 h3,
-.size-3 {
-  font-size: var(--text-3);
-  letter-spacing: var(--text-3-leading);
+[level="4"] {
+  font-size: var(--text_4_size);
+  letter-spacing: var(--text_4_leading);
 }
 h4,
-.size-2 {
-  font-size: var(--text-2);
-  letter-spacing: var(--text-2-leading);
+[level="3"] {
+  font-size: var(--text_3_size);
+  letter-spacing: var(--text_3_leading);
 }
 h5,
-.size-1 {
-  font-size: var(--text-1);
-  letter-spacing: var(--text-1-leading);
+[level="2"] {
+  font-size: var(--text_2_size);
+  letter-spacing: var(--text_2_leading);
 }
 p,
-.size-0 {
-  font-size: var(--text-0);
-  letter-spacing: var(--text-0-leading);
+[level="1"] {
+  font-size: var(--text_1_size);
+  letter-spacing: var(--text_1_leading);
 }
 
-.shade-positive {
-  color: var(--shade-positive);
+[shade="positive"] {
+  color: var(--shade_positive);
 }
-.shade-negative {
-  color: var(--shade-negative);
+[shade="negative"] {
+  color: var(--shade_negative);
 }
-.shade-cautious {
-  color: var(--shade-cautious);
+[shade="cautious"] {
+  color: var(--shade_cautious);
 }
-.shade-muted {
-  color: var(--shade-muted);
+[shade="warning"] {
+  color: var(--shade_warning);
 }
-.shade-subtle {
-  color: var(--shade-subtle);
+[shade="informative"] {
+  color: var(--shade_informative);
 }

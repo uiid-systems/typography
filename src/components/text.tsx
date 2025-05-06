@@ -1,76 +1,53 @@
-import { cx, booleanProps, styleProps, type RenderProp } from "@uiid/core";
+import { cx, type RenderProp } from "@uiid/core";
+import {
+  extractStyleAttributes,
+  extractToggleAttributes,
+} from "@uiid/style-props";
+import * as STYLE_PROPS from "@uiid/style-props/styles";
 import { isValidElement, cloneElement } from "react";
 
-import { SIZES, SHADES, STYLE_PROPS, TOGGLE_PROPS } from "../constants";
-import type { TypographyBooleanProps, TypographyStyleProps } from "../types";
+import type {
+  TypographyNativeProps,
+  TypographyStyleProps,
+  TypographyToggleProps,
+  TypographyUiidProps,
+  TypographyLevelProps,
+  TypographyShadeProps,
+} from "../types";
+import { TOGGLE_PROPS } from "../constants";
 
-export type TextProps = React.HTMLAttributes<HTMLSpanElement> &
-  React.PropsWithChildren &
-  TypographyBooleanProps &
-  TypographyStyleProps & {
-    render?: RenderProp;
-    ref?: React.Ref<any>;
-    size?: (typeof SIZES)[number];
-    shade?: (typeof SHADES)[number];
-  };
+export type TextProps = React.PropsWithChildren<{
+  render?: RenderProp;
+  ref?: React.Ref<any>;
+  level?: TypographyLevelProps;
+  shade?: TypographyShadeProps;
+}> &
+  TypographyNativeProps &
+  TypographyStyleProps &
+  TypographyToggleProps &
+  TypographyUiidProps;
 
-export const Text = ({
-  render,
-  size,
-  shade,
-  children,
-  ...allProps
-}: TextProps) => {
-  const styles = styleProps(allProps, STYLE_PROPS);
-  const variants = booleanProps(allProps, TOGGLE_PROPS);
-
-  // Get arrays of keys to filter out
-  const togglePropKeys = Object.keys(TOGGLE_PROPS) as Array<
-    keyof typeof TOGGLE_PROPS
-  >;
-  const stylePropKeys = Object.keys(STYLE_PROPS) as Array<
-    keyof typeof STYLE_PROPS
-  >;
-
-  // Create a copy of the props to modify
-  const filteredProps: Record<string, unknown> = { ...allProps };
-
-  // Remove toggle props
-  togglePropKeys.forEach((key) => {
-    if (key in filteredProps) {
-      delete filteredProps[key as string];
-    }
-  });
-
-  // Remove style props
-  stylePropKeys.forEach((key) => {
-    if (key in filteredProps) {
-      delete filteredProps[key as string];
-    }
-  });
-
-  const classNames = cx(
-    allProps.className,
-    render && render.props.className,
-    size !== undefined && `size-${size}`,
-    shade && `shade-${shade}`
-  );
+export const Text = ({ render, children, ...props }: TextProps) => {
+  const toggleAttrs = extractToggleAttributes(props, TOGGLE_PROPS);
+  /** @todo fix types */
+  const styleAttrs = extractStyleAttributes(props, STYLE_PROPS as any);
 
   const propsWithUiid = {
-    "data-uiid-typography": "text",
-    ...filteredProps,
-    style: { ...styles, ...variants },
-    className: classNames,
+    uiid: "text",
+    uiid_cat: "typography",
+    ...props,
+    style: { ...props.style, ...styleAttrs },
+    ...toggleAttrs,
   };
 
   if (isValidElement(render)) {
     return cloneElement(render, {
       ...propsWithUiid,
       children: children ?? render.props.children,
+      className: cx(props.className, render.props.className),
     });
   }
 
   return <span {...propsWithUiid}>{children}</span>;
 };
-
 Text.displayName = "Text";

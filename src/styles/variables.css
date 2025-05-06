@@ -1,23 +1,27 @@
-[data-uiid-typography] {
-  --shade-positive: mediumseagreen;
-  --shade-negative: tomato;
-  --shade-cautious: gold;
-  --shade-muted: color-mix(in srgb, var(--foreground), var(--background) 50%);
-  --shade-subtle: color-mix(in srgb, var(--foreground), var(--background) 30%);
+:root {
+  --spacing_scale: 0.25rem;
 
-  --text-5: 2.25rem;
-  --text-4: 1.875rem;
-  --text-3: 1.5rem;
-  --text-2: 1.25rem;
-  --text-1: 1rem;
-  --text-0: 0.875rem;
+  /* h1 */
+  --text_6_size: 2.25rem;
+  --text_6_leading: calc(2.5 / var(--text_5_size));
 
-  --text-5-leading: calc(2.5 / var(--text-5));
-  --text-4-leading: calc(2.25 / var(--text-4));
-  --text-3-leading: calc(2 / var(--text-3));
-  --text-2-leading: calc(1.75 / var(--text-2));
-  --text-1-leading: calc(1.5 / var(--text-1));
-  --text-0-leading: calc(1.25 / var(--text-0));
+  /* h2 */
+  --text_5_size: 1.875rem;
+  --text_5_leading: calc(2.25 / var(--text_4_size));
 
-  --spacing: 0.25rem;
+  /* h3 */
+  --text_4_size: 1.5rem;
+  --text_4_leading: calc(2 / var(--text_3_size));
+
+  /* h4 */
+  --text_3_size: 1.25rem;
+  --text_3_leading: calc(1.75 / var(--text_2_size));
+
+  /* h5 */
+  --text_2_size: 1rem;
+  --text_2_leading: calc(1.5 / var(--text_1_size));
+
+  /* p */
+  --text_1_size: 0.875rem;
+  --text_1_leading: calc(1.25 / var(--text_0_size));
 }

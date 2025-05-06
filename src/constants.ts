@@ -1,51 +1,23 @@
-import {
-  typography,
-  display,
-  opacity,
-  overflow,
-  spacing,
-  visibility,
-} from "@uiid/style-props/styles";
-import {
-  bold,
-  capitalize,
-  disabled,
-  hidden,
-  inactive,
-  italic,
-  lowercase,
-  truncate,
-  underline,
-  uppercase,
-} from "@uiid/style-props/toggles";
+import { type TogglePropsArray } from "@uiid/style-props";
 
-export const STYLE_PROPS = {
-  display,
-  opacity,
-  overflow,
-  visibility,
-  ...spacing,
-  ...typography,
-};
-export const TOGGLE_PROPS = {
-  bold,
-  capitalize,
-  disabled,
-  hidden,
-  inactive,
-  italic,
-  lowercase,
-  truncate,
-  underline,
-  uppercase,
-};
+export const TOGGLE_PROPS = [
+  "bold",
+  "capitalize",
+  "disabled",
+  "hidden",
+  "italic",
+  "lowercase",
+  "truncate",
+  "underline",
+  "uppercase",
+] as const satisfies TogglePropsArray;
 
-export const SIZES = [0, 1, 2, 3, 4, 5] as const;
+export const LEVELS = [1, 2, 3, 4, 5, 6] as const;
 
 export const SHADES = [
   "positive",
   "negative",
   "cautious",
-  "muted",
-  "subtle",
+  "warning",
+  "informative",
 ] as const;
