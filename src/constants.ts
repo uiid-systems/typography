@@ -20,4 +20,7 @@ export const SHADES = [
   "cautious",
   "warning",
   "informative",
+  "muted",
+  "accent",
+  "halftone",
 ] as const;

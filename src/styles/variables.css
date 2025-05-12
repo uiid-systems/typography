@@ -2,26 +2,26 @@
   --spacing_scale: 0.25rem;
 
   /* h1 */
-  --text_6_size: 2.25rem;
-  --text_6_leading: calc(2.5 / var(--text_5_size));
+  --text_5_size: 2.25rem;
+  --text_5_leading: calc(2.5 / var(--text_5_size));
 
   /* h2 */
-  --text_5_size: 1.875rem;
-  --text_5_leading: calc(2.25 / var(--text_4_size));
+  --text_4_size: 1.875rem;
+  --text_4_leading: calc(2.25 / var(--text_4_size));
 
   /* h3 */
-  --text_4_size: 1.5rem;
-  --text_4_leading: calc(2 / var(--text_3_size));
+  --text_3_size: 1.5rem;
+  --text_3_leading: calc(2 / var(--text_3_size));
 
   /* h4 */
-  --text_3_size: 1.25rem;
-  --text_3_leading: calc(1.75 / var(--text_2_size));
+  --text_2_size: 1.25rem;
+  --text_2_leading: calc(1.75 / var(--text_2_size));
 
-  /* h5 */
-  --text_2_size: 1rem;
-  --text_2_leading: calc(1.5 / var(--text_1_size));
+  /* h5, span, p */
+  --text_1_size: 1rem;
+  --text_1_leading: calc(1.5 / var(--text_1_size));
 
-  /* p */
-  --text_1_size: 0.875rem;
-  --text_1_leading: calc(1.25 / var(--text_0_size));
+  /* h6, small, label */
+  --text_0_size: 0.875rem;
+  --text_0_leading: calc(1.25 / var(--text_0_size));
 }
