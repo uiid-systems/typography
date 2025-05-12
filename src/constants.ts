@@ -18,7 +18,7 @@ export const SHADES = [
   "positive",
   "negative",
   "cautious",
-  "warning",
+  "pressing",
   "informative",
   "muted",
   "accent",

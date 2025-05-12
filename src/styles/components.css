@@ -6,6 +6,8 @@ h5,
 h6,
 p {
   margin: inherit;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
 h1,
@@ -39,7 +41,8 @@ h4,
 }
 h5,
 span,
-p [level="1"] {
+p,
+[level="1"] {
   font-size: var(--text_1_size);
   letter-spacing: var(--text_1_leading);
 }
@@ -60,8 +63,8 @@ label,
 [shade="cautious"] {
   color: var(--shade_cautious);
 }
-[shade="warning"] {
-  color: var(--shade_warning);
+[shade="pressing"] {
+  color: var(--shade_pressing);
 }
 [shade="informative"] {
   color: var(--shade_informative);

@@ -52,8 +52,8 @@ const meta = {
       <Text {...args} shade="cautious">
         SHADE=CAUTIOUS. Lorem ipsum dolor sit amet.
       </Text>
-      <Text {...args} shade="warning">
-        SHADE=WARNING. Lorem ipsum dolor sit amet.
+      <Text {...args} shade="pressing">
+        SHADE=PRESSING. Lorem ipsum dolor sit amet.
       </Text>
       <Text {...args} shade="informative">
         SHADE=INFORMATIVE. Lorem ipsum dolor sit amet.
