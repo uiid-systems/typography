@@ -12,7 +12,7 @@ export const TOGGLE_PROPS = [
   "uppercase",
 ] as const satisfies TogglePropsArray;
 
-export const LEVELS = [1, 2, 3, 4, 5, 6] as const;
+export const LEVELS = [0, 1, 2, 3, 4, 5, 6, 7, 8] as const;
 
 export const SHADES = [
   "positive",

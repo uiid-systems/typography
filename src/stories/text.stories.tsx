@@ -21,24 +21,33 @@ const meta = {
   component: Text,
   args: generateToggleArgs(TOGGLE_PROPS),
   render: (args) => (
-    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-      <Text {...args} render={<h1 />}>
-        LEVEL=5. Lorem ipsum dolor sit amet.
+    <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+      <Text {...args} level={8}>
+        LEVEL 8
       </Text>
-      <Text {...args} render={<h2 />}>
-        LEVEL=4. Lorem ipsum dolor sit amet.
+      <Text {...args} level={7}>
+        LEVEL 7
       </Text>
-      <Text {...args} render={<h3 />}>
-        LEVEL=3. Lorem ipsum dolor sit amet.
+      <Text {...args} level={6}>
+        LEVEL 6
       </Text>
-      <Text {...args} render={<h4 />}>
-        LEVEL=2. Lorem ipsum dolor sit amet.
+      <Text {...args} level={5}>
+        LEVEL 5
       </Text>
-      <Text {...args} render={<h5 />}>
-        LEVEL=1. Lorem ipsum dolor sit amet.
+      <Text {...args} level={4}>
+        LEVEL 4
       </Text>
-      <Text {...args} render={<h6 />}>
-        LEVEL=0. Lorem ipsum dolor sit amet.
+      <Text {...args} level={3}>
+        LEVEL 3
+      </Text>
+      <Text {...args} level={2}>
+        LEVEL 2
+      </Text>
+      <Text {...args} level={1}>
+        LEVEL 1
+      </Text>
+      <Text {...args} level={0}>
+        LEVEL 0
       </Text>
 
       <hr style={{ width: "100%" }} />
@@ -66,6 +75,20 @@ const meta = {
       </Text>
       <Text {...args} shade="accent">
         SHADE=ACCENT. Lorem ipsum dolor sit amet.
+      </Text>
+
+      <hr style={{ width: "100%" }} />
+
+      <Text {...args} render={<p />} style={{ maxWidth: 480 }}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+        officiis magni magnam facere quod accusantium dolorum minima aspernatur
+        totam beatae? Harum eum rerum enim aliquam. Magnam dolorem, praesentium
+        quisquam neque nulla fuga maiores laudantium vero obcaecati repellendus
+        eligendi! Aspernatur tenetur maxime earum repudiandae aliquam excepturi
+        placeat quas quidem eaque facilis sequi velit cupiditate accusantium
+        consectetur voluptatem, quasi odio amet quam doloremque cum illo
+        assumenda. Quibusdam, amet aliquid. Ipsa autem quae odit, eum dolore
+        fuga, nihil laudantium repellendus adipisci reiciendis sint.
       </Text>
     </div>
   ),

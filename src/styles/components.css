@@ -4,51 +4,45 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span {
   margin: inherit;
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
+[level="8"] {
+  font-size: var(--text_8_size);
+  letter-spacing: var(--text_8_leading);
 }
-
-h1,
+[level="7"] {
+  font-size: var(--text_7_size);
+  letter-spacing: var(--text_7_leading);
+}
+[level="6"] {
+  font-size: var(--text_6_size);
+  letter-spacing: var(--text_6_leading);
+}
 [level="5"] {
   font-size: var(--text_5_size);
   letter-spacing: var(--text_5_leading);
 }
-h2,
 [level="4"] {
   font-size: var(--text_4_size);
   letter-spacing: var(--text_4_leading);
 }
-h3,
 [level="3"] {
   font-size: var(--text_3_size);
   letter-spacing: var(--text_3_leading);
 }
-h4,
 [level="2"] {
   font-size: var(--text_2_size);
   letter-spacing: var(--text_2_leading);
 }
-h5,
-span,
-p,
 [level="1"] {
   font-size: var(--text_1_size);
   letter-spacing: var(--text_1_leading);
 }
-h6,
-small,
-label,
 [level="0"] {
   font-size: var(--text_0_size);
   letter-spacing: var(--text_0_leading);
