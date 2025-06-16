@@ -10,59 +10,60 @@ span {
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
   text-wrap: pretty;
+  text-underline-offset: 5%;
 }
 
 [level="0"] {
   font-size: var(--text_0_size);
-  font-weight: 400;
+  font-weight: var(--text_0_weight);
   letter-spacing: var(--text_0_leading);
   line-height: var(--text_0_line_height);
 }
 [level="1"] {
   font-size: var(--text_1_size);
-  font-weight: 400;
+  font-weight: var(--text_1_weight);
   letter-spacing: var(--text_1_leading);
   line-height: var(--text_1_line_height);
 }
 [level="2"] {
   font-size: var(--text_2_size);
-  font-weight: 400;
+  font-weight: var(--text_2_weight);
   letter-spacing: var(--text_2_leading);
   line-height: var(--text_2_line_height);
 }
 [level="3"] {
   font-size: var(--text_3_size);
-  font-weight: 400;
+  font-weight: var(--text_3_weight);
   letter-spacing: var(--text_3_leading);
   line-height: var(--text_3_line_height);
 }
 [level="4"] {
   font-size: var(--text_4_size);
-  font-weight: 500;
+  font-weight: var(--text_4_weight);
   letter-spacing: var(--text_4_leading);
   line-height: var(--text_4_line_height);
 }
 [level="5"] {
   font-size: var(--text_5_size);
-  font-weight: 500;
+  font-weight: var(--text_5_weight);
   letter-spacing: var(--text_5_leading);
   line-height: var(--text_5_line_height);
 }
 [level="6"] {
   font-size: var(--text_6_size);
-  font-weight: 600;
+  font-weight: var(--text_6_weight);
   letter-spacing: var(--text_6_leading);
   line-height: var(--text_6_line_height);
 }
 [level="7"] {
   font-size: var(--text_7_size);
-  font-weight: 600;
+  font-weight: var(--text_7_weight);
   letter-spacing: var(--text_7_leading);
   line-height: var(--text_7_line_height);
 }
 [level="8"] {
   font-size: var(--text_8_size);
-  font-weight: 700;
+  font-weight: var(--text_8_weight);
   letter-spacing: var(--text_8_leading);
   line-height: var(--text_8_line_height);
 }
