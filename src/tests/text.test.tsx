@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, test, expect } from "vitest";
 
 import { Text } from "../components/text";
+import { UIID } from "../constants";
 
 const text = "lorem ipsum";
 
@@ -26,6 +27,11 @@ describe(`Text`, () => {
     expect(h1).toHaveTextContent(text);
   });
 
+  test("uiid can't be overridden", () => {
+    render(<Text uiid="xxx">{text}</Text>);
+    const textEl = screen.getByText(text);
+    expect(textEl).toHaveAttribute("uiid", UIID);
+  });
   // test("supports style props", () => {
   //   render(<Text data-testid="Text" visibility="hidden" />);
   //   const text = screen.getByTestId("Text");

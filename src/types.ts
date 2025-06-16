@@ -18,11 +18,5 @@ export type TypographyToggleProps = Pick<
   (typeof TOGGLE_PROPS)[number]
 >;
 
-/** @todo move to core */
-export type TypographyUiidProps = {
-  uiid?: string;
-  uiid_cat?: string;
-};
-
 export type TypographyLevelProps = (typeof LEVELS)[number];
 export type TypographyShadeProps = (typeof SHADES)[number];

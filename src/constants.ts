@@ -1,5 +1,7 @@
 import { type TogglePropsArray } from "@uiid/style-props";
 
+export const UIID = "text";
+
 export const TOGGLE_PROPS = [
   "bold",
   "capitalize",
@@ -23,4 +25,6 @@ export const SHADES = [
   "muted",
   "accent",
   "halftone",
+  "foreground",
+  "background",
 ] as const;

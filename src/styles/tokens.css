@@ -25,22 +25,22 @@
   --text_4_weight: 500;
 
   --text_5_size: 2.25rem;
-  --text_5_leading: 0.5%;
-  --text_5_line_height: 140%;
+  --text_5_leading: 0.25%;
+  --text_5_line_height: 130%;
   --text_5_weight: 500;
 
   --text_6_size: 3rem;
-  --text_6_leading: 0.5%;
+  --text_6_leading: 0%;
   --text_6_line_height: 120%;
   --text_6_weight: 600;
 
   --text_7_size: 4rem;
-  --text_7_leading: 0%;
+  --text_7_leading: -1%;
   --text_7_line_height: 110%;
   --text_7_weight: 600;
 
   --text_8_size: 6rem;
-  --text_8_leading: 0%;
-  --text_8_line_height: 110%;
+  --text_8_leading: -2%;
+  --text_8_line_height: 105%;
   --text_8_weight: 700;
 }

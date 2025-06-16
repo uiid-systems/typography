@@ -10,22 +10,22 @@ import type {
   TypographyNativeProps,
   TypographyStyleProps,
   TypographyToggleProps,
-  TypographyUiidProps,
   TypographyLevelProps,
   TypographyShadeProps,
 } from "../types";
-import { TOGGLE_PROPS } from "../constants";
+import { TOGGLE_PROPS, UIID } from "../constants";
 
 export type TextProps = React.PropsWithChildren<{
   render?: RenderProp;
   ref?: React.Ref<any>;
   level?: TypographyLevelProps;
   shade?: TypographyShadeProps;
+  uiid?: string;
+  uiidtype?: string;
 }> &
   TypographyNativeProps &
   TypographyStyleProps &
-  TypographyToggleProps &
-  TypographyUiidProps;
+  TypographyToggleProps;
 
 export const Text = ({ render, children, ...props }: TextProps) => {
   const toggleAttrs = extractToggleAttributes(props, TOGGLE_PROPS);
@@ -33,9 +33,8 @@ export const Text = ({ render, children, ...props }: TextProps) => {
   const styleAttrs = extractStyleAttributes(props, STYLE_PROPS as any);
 
   const propsWithUiid = {
-    uiid: "text",
-    uiid_cat: "typography",
     ...props,
+    uiid: UIID,
     style: { ...props.style, ...styleAttrs },
     ...toggleAttrs,
   };

@@ -17,9 +17,15 @@ function generateToggleArgs(toggleProps: TogglePropsArray) {
 }
 
 const meta = {
-  title: "Primitives/Text",
+  title: "Text",
   component: Text,
   args: generateToggleArgs(TOGGLE_PROPS),
+} satisfies Meta<typeof Text>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Levels: Story = {
   render: (args) => (
     <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
       <Text {...args} level={0}>
@@ -49,54 +55,65 @@ const meta = {
       <Text {...args} level={8}>
         LEVEL 8
       </Text>
+    </div>
+  ),
+};
 
-      <hr style={{ width: "100%" }} />
-
-      <Text {...args} shade="positive">
-        SHADE=POSITIVE. Lorem ipsum dolor sit amet.
-      </Text>
+export const Shades: Story = {
+  args: {
+    level: 3,
+  },
+  render: (args) => (
+    <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
       <Text {...args} shade="negative">
-        SHADE=NEGATIVE. Lorem ipsum dolor sit amet.
-      </Text>
-      <Text {...args} shade="cautious">
-        SHADE=CAUTIOUS. Lorem ipsum dolor sit amet.
+        NEGATIVE
       </Text>
       <Text {...args} shade="pressing">
-        SHADE=PRESSING. Lorem ipsum dolor sit amet.
+        PRESSING
+      </Text>
+      <Text {...args} shade="cautious">
+        CAUTIOUS
+      </Text>
+      <Text {...args} shade="positive">
+        POSITIVE
       </Text>
       <Text {...args} shade="informative">
-        SHADE=INFORMATIVE. Lorem ipsum dolor sit amet.
+        INFORMATIVE
+      </Text>
+      <Text {...args} shade="background">
+        BACKGROUND
       </Text>
       <Text {...args} shade="muted">
-        SHADE=MUTED. Lorem ipsum dolor sit amet.
+        MUTED
       </Text>
       <Text {...args} shade="halftone">
-        SHADE=HALFTONE. Lorem ipsum dolor sit amet.
+        HALFTONE
       </Text>
       <Text {...args} shade="accent">
-        SHADE=ACCENT. Lorem ipsum dolor sit amet.
+        ACCENT
       </Text>
-
-      <hr style={{ width: "100%" }} />
-
-      <Text {...args} render={<p />} style={{ maxWidth: 480 }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-        officiis magni magnam facere quod accusantium dolorum minima aspernatur
-        totam beatae? Harum eum rerum enim aliquam. Magnam dolorem, praesentium
-        quisquam neque nulla fuga maiores laudantium vero obcaecati repellendus
-        eligendi! Aspernatur tenetur maxime earum repudiandae aliquam excepturi
-        placeat quas quidem eaque facilis sequi velit cupiditate accusantium
-        consectetur voluptatem, quasi odio amet quam doloremque cum illo
-        assumenda. Quibusdam, amet aliquid. Ipsa autem quae odit, eum dolore
-        fuga, nihil laudantium repellendus adipisci reiciendis sint.
+      <Text {...args} shade="foreground">
+        FOREGROUND
       </Text>
     </div>
   ),
-} satisfies Meta<typeof Text>;
+};
 
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  name: "Text",
+export const Paragraph: Story = {
+  args: {
+    level: 3,
+  },
+  render: (args) => (
+    <Text {...args} render={<p />} style={{ maxWidth: 720 }}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur officiis
+      magni magnam facere quod accusantium dolorum minima aspernatur totam
+      beatae? Harum eum rerum enim aliquam. Magnam dolorem, praesentium quisquam
+      neque nulla fuga maiores laudantium vero obcaecati repellendus eligendi!
+      Aspernatur tenetur maxime earum repudiandae aliquam excepturi placeat quas
+      quidem eaque facilis sequi velit cupiditate accusantium consectetur
+      voluptatem, quasi odio amet quam doloremque cum illo assumenda. Quibusdam,
+      amet aliquid. Ipsa autem quae odit, eum dolore fuga, nihil laudantium
+      repellendus adipisci reiciendis sint.
+    </Text>
+  ),
 };
