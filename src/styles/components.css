@@ -9,43 +9,62 @@ span {
   margin: inherit;
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
+  text-wrap: pretty;
 }
 
-[level="8"] {
-  font-size: var(--text_8_size);
-  letter-spacing: var(--text_8_leading);
-}
-[level="7"] {
-  font-size: var(--text_7_size);
-  letter-spacing: var(--text_7_leading);
-}
-[level="6"] {
-  font-size: var(--text_6_size);
-  letter-spacing: var(--text_6_leading);
-}
-[level="5"] {
-  font-size: var(--text_5_size);
-  letter-spacing: var(--text_5_leading);
-}
-[level="4"] {
-  font-size: var(--text_4_size);
-  letter-spacing: var(--text_4_leading);
-}
-[level="3"] {
-  font-size: var(--text_3_size);
-  letter-spacing: var(--text_3_leading);
-}
-[level="2"] {
-  font-size: var(--text_2_size);
-  letter-spacing: var(--text_2_leading);
+[level="0"] {
+  font-size: var(--text_0_size);
+  font-weight: 400;
+  letter-spacing: var(--text_0_leading);
+  line-height: var(--text_0_line_height);
 }
 [level="1"] {
   font-size: var(--text_1_size);
+  font-weight: 400;
   letter-spacing: var(--text_1_leading);
+  line-height: var(--text_1_line_height);
 }
-[level="0"] {
-  font-size: var(--text_0_size);
-  letter-spacing: var(--text_0_leading);
+[level="2"] {
+  font-size: var(--text_2_size);
+  font-weight: 400;
+  letter-spacing: var(--text_2_leading);
+  line-height: var(--text_2_line_height);
+}
+[level="3"] {
+  font-size: var(--text_3_size);
+  font-weight: 400;
+  letter-spacing: var(--text_3_leading);
+  line-height: var(--text_3_line_height);
+}
+[level="4"] {
+  font-size: var(--text_4_size);
+  font-weight: 500;
+  letter-spacing: var(--text_4_leading);
+  line-height: var(--text_4_line_height);
+}
+[level="5"] {
+  font-size: var(--text_5_size);
+  font-weight: 500;
+  letter-spacing: var(--text_5_leading);
+  line-height: var(--text_5_line_height);
+}
+[level="6"] {
+  font-size: var(--text_6_size);
+  font-weight: 600;
+  letter-spacing: var(--text_6_leading);
+  line-height: var(--text_6_line_height);
+}
+[level="7"] {
+  font-size: var(--text_7_size);
+  font-weight: 600;
+  letter-spacing: var(--text_7_leading);
+  line-height: var(--text_7_line_height);
+}
+[level="8"] {
+  font-size: var(--text_8_size);
+  font-weight: 700;
+  letter-spacing: var(--text_8_leading);
+  line-height: var(--text_8_line_height);
 }
 
 [shade="positive"] {

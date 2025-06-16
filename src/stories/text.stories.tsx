@@ -22,32 +22,32 @@ const meta = {
   args: generateToggleArgs(TOGGLE_PROPS),
   render: (args) => (
     <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-      <Text {...args} level={8}>
-        LEVEL 8
-      </Text>
-      <Text {...args} level={7}>
-        LEVEL 7
-      </Text>
-      <Text {...args} level={6}>
-        LEVEL 6
-      </Text>
-      <Text {...args} level={5}>
-        LEVEL 5
-      </Text>
-      <Text {...args} level={4}>
-        LEVEL 4
-      </Text>
-      <Text {...args} level={3}>
-        LEVEL 3
-      </Text>
-      <Text {...args} level={2}>
-        LEVEL 2
+      <Text {...args} level={0}>
+        LEVEL 0
       </Text>
       <Text {...args} level={1}>
         LEVEL 1
       </Text>
-      <Text {...args} level={0}>
-        LEVEL 0
+      <Text {...args} level={2}>
+        LEVEL 2
+      </Text>
+      <Text {...args} level={3}>
+        LEVEL 3
+      </Text>
+      <Text {...args} level={4}>
+        LEVEL 4
+      </Text>
+      <Text {...args} level={5}>
+        LEVEL 5
+      </Text>
+      <Text {...args} level={6}>
+        LEVEL 6
+      </Text>
+      <Text {...args} level={7}>
+        LEVEL 7
+      </Text>
+      <Text {...args} level={8}>
+        LEVEL 8
       </Text>
 
       <hr style={{ width: "100%" }} />
