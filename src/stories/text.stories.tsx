@@ -19,6 +19,7 @@ function generateToggleArgs(toggleProps: TogglePropsArray) {
 const meta = {
   title: "Text",
   component: Text,
+  tags: ["autodocs"],
   args: generateToggleArgs(TOGGLE_PROPS),
 } satisfies Meta<typeof Text>;
 
